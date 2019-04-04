@@ -1,2 +1,2 @@
-zip: fira base=
-copy: fira-LICENSE
+copy: LICENSE
+tar: fonts-otf-mozilla-fira
