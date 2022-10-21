@@ -2,9 +2,8 @@
 %define fname mozilla-fira
 
 Name: fonts-otf-%fname
-Version: 3.111
-Release: alt2
-Serial: 2
+Version: 4.301
+Release: alt1
 
 Summary: Mozilla's Fira fonts
 License: OFL
@@ -16,7 +15,7 @@ Source1: LICENSE
 
 BuildArch: noarch
 BuildRequires: rpm-build-fonts >= 0.4
-PreReq: fontconfig >= 2.4.2
+Requires: fontconfig >= 2.4.2
 
 %description
 Originally designed to integrate with the character of Firefox OS,
@@ -33,6 +32,9 @@ cp -a %SOURCE1 .
 %doc LICENSE
 
 %changelog
+* Fri Oct 21 2022 Ivan G <lordvivec@mail.ru> 4.301-alt1
+- 4.301
+
 * Thu Apr 04 2019 Michael Shigorin <mike@altlinux.org> 2:3.111-alt2
 - revert to 3.111: 4.202 got buggy Cyrillic Capital Letter SHCH
   + NB: should rather be upgraded to Carrois Fira though!
