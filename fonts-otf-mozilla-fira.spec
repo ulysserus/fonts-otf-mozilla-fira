@@ -1,25 +1,24 @@
-%define oname fira
 %define fname mozilla-fira
 
 Name: fonts-otf-%fname
 Version: 4.301
 Release: alt1
 
-Summary: Mozilla's Fira fonts
-License: OFL
+Summary: Fira Font Family
+License: OFL-1.1-no-RFN
 Group: System/Fonts/True type
 
-Url: https://github.com/mozilla/Fira
+Url: https://github.com/bBoxType/FiraSans
 Source0: %name-%version.tar
 Source1: LICENSE
 
 BuildArch: noarch
 BuildRequires: rpm-build-fonts >= 0.4
-Requires: fontconfig >= 2.4.2
+Requires(pre,postun): fontconfig >= 2.4.2
 
 %description
-Originally designed to integrate with the character of Firefox OS,
-Fira is a new set of sans-serif fonts which focuses on legibility.
+Set of Fira family fonts (ex Mozilla Fira)
+Fira Sans 4.3 + Fira Code 3.2 + Fira Mono 3.2
 
 %prep
 %setup
@@ -32,8 +31,8 @@ cp -a %SOURCE1 .
 %doc LICENSE
 
 %changelog
-* Fri Oct 21 2022 Ivan G <lordvivec@mail.ru> 4.301-alt1
-- 4.301
+* Mon Oct 24 2022 Ivan G <lordvivec@mail.ru> 4.301-alt1
+- Fira Sans 4.3(update) + Fira Code 3.2(new) + Fira Mono 3.2(update)
 
 * Thu Apr 04 2019 Michael Shigorin <mike@altlinux.org> 2:3.111-alt2
 - revert to 3.111: 4.202 got buggy Cyrillic Capital Letter SHCH

@@ -1,0 +1,27 @@
+Шрифт Mozilla Fira
+В пакете набор .otf Fira Sans 4.3 + Fira Code 3.2 + Fira Mono 3.2
+
+Лицензия OFL 1.1 no RFN
+https://github.com/mozilla/Fira/pull/219
+Был период, когда шрифт публиковался с RFN, позже это условие сняли. Сейчас в апстриме лицензия no RFN.
+
+
+Авторы шрифта разошлись с мозиллой выложили шрифт под OFL в своем репозитории, отсюда он уже разошелся по интернету.
+Чтобы собрать пакет, нужно перенести все .otf файлы к нам, сохранив структуру (каталог для .otf + LICENSE)
+При установке макрос %install скопирует каталог в папку со шрифтами, системный fontconfig зарегистрирует их.
+Файлы .pdf положил рядом на всякий случай.
+Спек оставил наш старый, обновил только версии.
+
+Рядом положил Open Office документ для проверки шрифтов.
+
+
+Подготовка исходников:
+
+checkout git@github.com:bBoxType/FiraSans.git
+cd FiraSans
+mkdir fonts-otf-mozilla-fira
+mkdir technical-reports
+find . -type f -name '*.otf' -exec mv -t fonts-otf-mozilla-fira/ {} +
+find . -type f -name '*.pdf' -exec mv -t technical-reports/ {} +
+cp OFL.txt LICENSE
+cp -r fonts-otf-mozilla-fira/ technical-reports/ OFL.txt README.md <ALT GEAR REPO>
